@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="js-stop-transition">
+    <header class="header">
+        <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header__content">
+            <span class="header__close"></span>
+            <a href="index.html" class="header__logo">
+                <img src="assets/logo.png" alt="">
+            </a>
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="1.html" class="header__menu-link">Лабораторная мебель</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="2.html" class="header__menu-link">Металлообработка</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="3.html" class="header__menu-link">Порошковая покраска</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="4.html" class="header__menu-link">Деревянная тара</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="5.html" class="header__menu-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__contacts">
+                <a href="mailto:info@politen.ru" class="header__contact">info@politen.ru</a>
+                <a href="tel:+79138004781" class="header__contact">+7 (913) 800 4781</a>
+            </div>
+        </div>
+    </header>
+    <section class="full-promo met-promo">
+        <div class="container container_center">
+            <div class="full-promo__container">
+                <h2 class="section-h section-h_big">Мы занимаемся <br>металлообработкой</h2>
+                <span class="section-text section-text_big">И делаем это хорошо</span>
+            </div>
+        </div>
+    </section>
+    <section class="spec">
+        <div class="container container_center">
+            <h2 class="section-h">Специализация</h2>
+            <ul class="spec__list">
+                <li class="spec__item">
+                    <img src="assets/spec_1.webp" alt="" class="spec__img">
+                    <span class="spec__text">Сварка в среде аргона нержавеющей стали, титановых сплавов, алюминия, дюралюминиевых сплавов.</span>
+                </li>
+                <li class="spec__item">
+                    <img src="assets/spec_2.webp" alt="" class="spec__img">
+                    <span class="spec__text">Изготовление мебельных каркасов, рам для оборудования и приборов из профильной трубы различного сечения.</span>
+                </li>
+                <li class="spec__item">
+                    <img src="assets/spec_3.webp" alt="" class="spec__img">
+                    <span class="spec__text">Изготовление корпусов приборов и оборудования из листовой стали с применением высокоточной гибки на ЧПУ прессе.</span>
+                </li>
+                <li class="spec__item">
+                    <img src="assets/spec_4.webp" alt="" class="spec__img">
+                    <span class="spec__text">Изготовление токарных деталей по чертежам заказчика. Серийность от 100 шт.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="section-h section-h_center">Мы на связи:</div>
+            <div class="contact__list">
+                <a href="mailto:info@politen.ru" class="contact__item">info@politen.ru</a>
+                <a href="tel:+79138004781" class="contact__item">+7 (913) 800 4781</a>
+            </div>
+            <form action="" class="form">
+                <input class="form__input" type="text" placeholder="Ваше имя" required>
+                <input class="form__input" type="email" placeholder="Ваш E-mail" required>
+                <input class="form__input" type="tel" placeholder="Ваш телефон" required>
+                <input class="form__input" type="text" placeholder="Комментарий" required>
+                <button class="button" type="submit">Свзяаться</button>
+            </form>
+            <span class="contact__politic">Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+                соглашаетесь c <a href="#">политикой конфиденциальности</a></a></span>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container container_center">
+            &copy; 2020-2021 OOO «Политэн»
+        </div>
+    </footer>
+    <script>
+        window.addEventListener("load", function (event) {
+            document.body.classList.remove('js-stop-transition')
+        }); 
+        document.getElementsByClassName('header__burger')[0].addEventListener('click', () => {
+            document.getElementsByClassName('header__content')[0].classList.toggle('header__content_active');
+            document.getElementsByClassName('header')[0].classList.toggle('header_active');
+        });
+        document.getElementsByClassName('header__close')[0].addEventListener('click', () => {
+            document.getElementsByClassName('header__content')[0].classList.toggle('header__content_active');
+            document.getElementsByClassName('header')[0].classList.toggle('header_active');
+        });
+        document.getElementsByClassName('header')[0].addEventListener('click', (e) => {
+            if (!e.target.classList.contains('header_active')) {
+                return;
+            }
+            document.getElementsByClassName('header__content')[0].classList.toggle('header__content_active');
+            document.getElementsByClassName('header')[0].classList.toggle('header_active');
+        });
+    </script>
+</body>
+</html>
